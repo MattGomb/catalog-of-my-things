@@ -23,7 +23,7 @@
 
 # 📖 [Catalog of my Things] <a name="about-project"></a>
 
-**[Űcatalog-of-my-things]** is a console app that allows the user to keep a record of different types of things they owm: books, music albums, movies, and games. The project was created based on a UML class diagram. The data is stored in JSON files.
+**[catalog-of-my-things]** is a console app that allows the user to keep a record of different types of things they owm: books, music albums, movies, and games. The project was created based on a UML class diagram. The data is stored in JSON files.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
