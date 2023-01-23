@@ -21,10 +21,9 @@
 - [📝 License](#license)
 
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Catalog of my Things] <a name="about-project"></a>
 
-**[your_project__name]** is a...
-
+**[Űcatalog-of-my-things]** is a console app that allows the user to keep a record of different types of things they owm: books, music albums, movies, and games. The project was created based on a UML class diagram. The data is stored in JSON files.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -71,8 +70,9 @@ ruby version 2.7.0 or later
 ### Setup
 
 Clone this repository to your desired folder:
-`https://github.com/MattGomb/catalog-of-my-things.git
-  cd catalog-of-my-things`
+
+`https://github.com/MattGomb/catalog-of-my-things.git`
+`cd catalog-of-my-things`
 
 
 ### Install
