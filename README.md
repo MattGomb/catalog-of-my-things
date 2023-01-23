@@ -72,6 +72,7 @@ ruby version 2.7.0 or later
 Clone this repository to your desired folder:
 
 `https://github.com/MattGomb/catalog-of-my-things.git`
+
 `cd catalog-of-my-things`
 
 
