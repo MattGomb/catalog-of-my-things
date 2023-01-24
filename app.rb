@@ -1,12 +1,16 @@
 require_relative './modules/add_book'
 require_relative './modules/list_books'
+require_relative './data/write_book'
+require_relative './data/read_book'
 
 class App
   include AddBook
   include ListBooks
+  include WriteBook
+  include ReadBook
 
   def initialize
-    @books = []
+    @books = read_book
     @albums = []
     @games = []
     @authors = []
@@ -36,6 +40,7 @@ class App
     when '9'
       puts 'This will add a game'
     else
+      write_book
       puts 'Thanks for using the app'
       exit
     end

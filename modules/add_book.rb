@@ -15,10 +15,10 @@ module AddBook
         genre = gets.chomp
         puts 'Publisher: '
         publisher = gets.chomp
-        puts 'Publish date: '
-        publish_date = gets.chomp
         puts 'Cover state: '
         cover_state = gets.chomp
+        puts 'Publish date: '
+        publish_date = gets.chomp
         puts 'Label: '
         label = gets.chomp
         puts 'Label color: '
@@ -41,7 +41,7 @@ module AddBook
         @genres << new_genre
         end
 
-        book = Book.new(publisher, cover_state, title, publish_date)
+        book = Book.new(title, publisher, cover_state, publish_date)
         book.author = new_author
         book.label = new_label
         book.genre = new_genre
