@@ -4,8 +4,8 @@ require_relative 'items'
 class Author
   attr_accessor :first_name, :last_name, :id, :items
 
-  def initialize(first_name, last_name, id)
-    @first_name = firs_tname
+  def initialize(first_name, last_name)
+    @first_name = first_name
     @last_name = last_name
     @id = generate_id
     @items = []
