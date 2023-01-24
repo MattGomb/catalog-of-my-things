@@ -1,8 +1,10 @@
+require 'uuid'
+
 class Label
   attr_accessor :title, :color
 
-  def initialize(id, title, color)
-    @id = id
+  def initialize(title, color)
+    @id = UUID.generate
     @title = title
     @color = color
     @items = []
