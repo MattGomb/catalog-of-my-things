@@ -10,7 +10,7 @@ class Game < Item
   end
 
   def can_be_archived?
-    if last_played_at < Date.today - (365 * 2)
+    last_played_at < Date.today - (365 * 2)
       true
     else
       false
