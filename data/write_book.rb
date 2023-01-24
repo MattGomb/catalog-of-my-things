@@ -19,5 +19,5 @@ module WriteBook
     File.write('./json_files/books.json', json)
 
     puts 'Books saved to file successfully!'
-  end  
+  end
 end
