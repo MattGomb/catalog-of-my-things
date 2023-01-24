@@ -1,3 +1,5 @@
+require_relative 'items'
+
 class MusicAlbum < Item
   def initialize(on_spotify: false)
     super
