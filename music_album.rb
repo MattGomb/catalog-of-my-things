@@ -6,11 +6,6 @@ class MusicAlbum < Item
     @on_spotify = on_spotify
   end
 
-  def on_spotify?
-    # Should this be like: "return true if @on_spotify", or just this keyword is enough..?
-    @on_spotify
-  end
-
   private
 
   def can_be_archived?
