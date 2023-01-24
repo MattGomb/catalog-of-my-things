@@ -1,8 +1,11 @@
 require_relative 'items'
+require 'uuid'
 
-class Genre < Item
-  def initialize(id, name)
-    super(id)
+class Genre
+  attr_accessor :name
+
+  def initialize(name)
+    @id = UUID.generate
     @name = name
     @items = []
   end

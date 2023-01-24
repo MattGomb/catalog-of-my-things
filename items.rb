@@ -1,10 +1,13 @@
 require 'date'
+require 'uuid'
 
 class Item
-  attr_writer :genre, :author, :source, :label
+  attr_accessor :genre, :author, :label
+  attr_reader :title
 
-  def initialize(id, publish_date, archived: false)
-    @id = id
+  def initialize(title, publish_date, archived: false)
+    @title = title
+    @id = UUID.generate
     @publish_date = publish_date
     @archived = archived
   end

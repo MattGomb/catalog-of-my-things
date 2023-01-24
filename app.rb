@@ -1,6 +1,16 @@
+require_relative './modules/add_book'
+require_relative './modules/list_books'
+require_relative './data/write_book'
+require_relative './data/read_book'
+
 class App
+  include AddBook
+  include ListBooks
+  include WriteBook
+  include ReadBook
+
   def initialize
-    @books = []
+    @books = read_book
     @albums = []
     @games = []
     @authors = []
@@ -12,7 +22,7 @@ class App
     selected_opt = gets.chomp
     case selected_opt
     when '1'
-      puts 'This will list the books'
+      list_books
     when '2'
       puts 'This will list the music albums'
     when '3'
@@ -24,12 +34,13 @@ class App
     when '6'
       puts 'This will list the authors'
     when '7'
-      puts 'This will add a book'
+      add_book
     when '8'
       puts 'This will add a music album'
     when '9'
       puts 'This will add a game'
     else
+      write_book
       puts 'Thanks for using the app'
       exit
     end

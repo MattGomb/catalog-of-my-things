@@ -1,8 +1,10 @@
 require_relative 'items'
 
 class Book < Item
-  def initialize(publisher, cover_state, id, publish_date, archived: false)
-    super(id, publish_date, archived: archived)
+  attr_reader :publisher, :cover_state, :publish_date
+
+  def initialize(title, publisher, cover_state, publish_date, archived: false)
+    super(title, publish_date, archived: archived)
     @publisher = publisher
     @cover_state = cover_state
   end
@@ -10,7 +12,8 @@ class Book < Item
   private
 
   def can_be_archived?
-    super
     return false if cover_state.downcase == 'bad'
+
+    super
   end
 end
