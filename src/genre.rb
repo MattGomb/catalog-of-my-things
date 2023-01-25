@@ -2,7 +2,7 @@ require_relative 'items'
 require 'uuid'
 
 class Genre
-  attr_accessor :name
+  attr_accessor :name, :items
 
   def initialize(name)
     @id = UUID.generate

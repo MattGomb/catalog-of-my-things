@@ -1,5 +1,3 @@
-require_relative '../game'
-
 module ListGames
   def list_games
     @games.each do |game|

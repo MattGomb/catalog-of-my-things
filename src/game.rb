@@ -9,8 +9,10 @@ class Game < Item
     @multiplayer = multiplayer
   end
 
+  private
+
   def can_be_archived?
-    return true if super && last_played_at < Date.today - (365 * 2)
+    return true if super && Date.strptime(last_played_at, '%d/%m/%Y') < Date.today - (365 * 2)
 
     false
   end

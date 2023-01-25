@@ -1,5 +1,3 @@
-require_relative '../music_album'
-
 module ListMusicAlbums
   def list_music_albums
     @albums.each do |album|

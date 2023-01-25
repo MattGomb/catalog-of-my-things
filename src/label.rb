@@ -1,7 +1,7 @@
 require 'uuid'
 
 class Label
-  attr_accessor :title, :color
+  attr_accessor :title, :color, :items
 
   def initialize(title, color)
     @id = UUID.generate

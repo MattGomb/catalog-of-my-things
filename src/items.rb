@@ -19,7 +19,7 @@ class Item
   private
 
   def can_be_archived?
-    return true if published_date < Date.today - 3652
+    return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
 
     false
   end

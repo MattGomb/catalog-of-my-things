@@ -1,47 +1,13 @@
-require_relative './modules/add_book'
-require_relative './modules/list_books'
-require_relative './modules/add_music_album'
-require_relative './modules/list_music_album'
-require_relative './modules/add_game'
-require_relative './modules/list_game'
-require_relative './modules/list_authors'
-require_relative './modules/list_genres'
-require_relative './modules/list_labels'
-require_relative './data/write_authors'
-require_relative './data/read_authors'
-require_relative './data/write_book'
-require_relative './data/read_book'
-require_relative './data/write_music_album'
-require_relative './data/read_music_album'
-require_relative './data/read_game'
-require_relative './data/write_game'
-require_relative './data/read_genres'
-require_relative './data/write_genres'
-require_relative './data/write_labels'
-require_relative './data/read_labels'
+require_relative './modules/add_modules'
+require_relative './modules/list_modules'
+require_relative './data/read_data'
+require_relative './data/write_data'
 
 class App
-  include AddBook
-  include ListBooks
-  include WriteBook
-  include ReadBook
-  include ListGames
-  include AddGame
-  include WriteGame
-  include ReadGame
-  include AddMusicAlbum
-  include ListMusicAlbums
-  include WriteMusicAlbum
-  include ReadMusicAlbum
-  include ListAuthors
-  include WriteAuthors
-  include ReadAuthors
-  include WriteGenres
-  include ReadGenres
-  include ListGenres
-  include ListLabels
-  include ReadLabels
-  include WriteLabels
+  include AddModules
+  include ListModules
+  include ReadData
+  include WriteData
 
   def initialize
     @books = read_book
@@ -74,12 +40,7 @@ class App
     when '9'
       add_game
     else
-      write_book
-      write_music_album
-      write_game
-      write_authors
-      write_genres
-      write_labels
+      write_data
       puts 'Thanks for using the app'
       exit
     end
