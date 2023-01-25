@@ -7,5 +7,14 @@
     "label": "old",
     "label_color": "red",
     "on_spotify": "y"
+  },
+  {
+    "title": "ttt666",
+    "author": "al2, af2",
+    "genre": "ggg666",
+    "publish_date": "2010",
+    "label": "true",
+    "label_color": "ugly",
+    "on_spotify": "n"
   }
 ]

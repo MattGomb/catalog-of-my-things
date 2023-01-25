@@ -16,6 +16,8 @@ class Author
     item.author = self
   end
 
+  private
+
   def generate_id
     UUID.generate
   end
