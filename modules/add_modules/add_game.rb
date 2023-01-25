@@ -14,9 +14,9 @@ module AddGame
     puts 'Genre: '
     genre = gets.chomp
     puts 'Publish date: '
-    publish_date = gets.chomp
+    publish_date = correct_format
     puts 'Last Played: '
-    last_played_at = gets.chomp
+    last_played_at = correct_format
     puts 'Label: '
     label = gets.chomp
     puts 'Label color: '
@@ -44,5 +44,19 @@ module AddGame
     game.label = new_label
     game.genre = new_genre
     @games << game
+  end
+
+  def correct_format
+    option = nil
+    loop do
+      option = gets.chomp
+      case option
+      when /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
+        break
+      else
+        puts 'Please enter the valid format: dd/mm/yyyy'
+      end
+    end
+    option
   end
 end
