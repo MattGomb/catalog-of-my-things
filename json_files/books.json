@@ -1,32 +1,12 @@
 [
   {
-    "title": "1",
-    "author": "3, 2",
-    "genre": "4",
-    "publisher": "5",
-    "cover_state": "7",
-    "publish_date": "6",
-    "label": "8",
-    "label_color": "9"
-  },
-  {
-    "title": "a",
-    "author": "c, b",
-    "genre": "d",
-    "publisher": "e",
-    "cover_state": "f",
-    "publish_date": "g",
-    "label": "h",
-    "label_color": "i"
-  },
-  {
-    "title": "q",
-    "author": "e, w",
-    "genre": "r",
-    "publisher": "t",
-    "cover_state": "z",
-    "publish_date": "u",
-    "label": "i",
-    "label_color": "o"
+    "title": "title1",
+    "author": "auhtlast2, authfirst1",
+    "genre": "genre1",
+    "publisher": "pub1",
+    "cover_state": "good",
+    "publish_date": "2022",
+    "label": "new",
+    "label_color": "green"
   }
 ]
