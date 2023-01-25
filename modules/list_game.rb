@@ -3,7 +3,7 @@ require_relative '../game'
 module ListGames
   def list_games
     @games.each do |game|
-        puts "
+      puts "
         - Title: #{game.title}
         Author: #{game.author.last_name}, #{game.author.first_name}
         Genre: #{game.genre.name}

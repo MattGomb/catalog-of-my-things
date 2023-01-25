@@ -27,22 +27,22 @@ module AddGame
     new_author = @authors.find { |auth| auth.first_name == author_first && auth.last_name == author_last }
 
     unless new_author
-        new_author = Author.new(author_first, author_last)
-        @authors << new_author
-      end
-      unless new_genre
-        new_genre = Genre.new(genre)
-        @genres << new_genre
-      end
-      unless new_label
-        new_label = Label.new(label, label_color)
-        @genres << new_genre
-      end
-
-      game = Game.new(title, publish_date ,last_played_at, false)
-      game.author = new_author
-      game.label = new_label
-      game.genre = new_genre
-      @game << game
+      new_author = Author.new(author_first, author_last)
+      @authors << new_author
     end
+    unless new_genre
+      new_genre = Genre.new(genre)
+      @genres << new_genre
+    end
+    unless new_label
+      new_label = Label.new(label, label_color)
+      @genres << new_genre
+    end
+
+    game = Game.new(title, publish_date, last_played_at)
+    game.author = new_author
+    game.label = new_label
+    game.genre = new_genre
+    @games << game
+  end
 end

@@ -11,13 +11,12 @@ require_relative './data/read_music_album'
 require_relative './data/read_game'
 require_relative './data/write_game'
 
-
 class App
   include AddBook
   include ListBooks
   include WriteBook
   include ReadBook
-  include ListGame
+  include ListGames
   include AddGame
   include WriteGame
   include ReadGame
@@ -43,7 +42,7 @@ class App
     when '2'
       list_music_albums
     when '3'
-      list_game
+      list_games
     when '4'
       puts 'This will list the genres'
     when '5'
