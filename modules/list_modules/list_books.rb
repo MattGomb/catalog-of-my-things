@@ -1,5 +1,3 @@
-require_relative '../book'
-
 module ListBooks
   def list_books
     @books.each do |book|

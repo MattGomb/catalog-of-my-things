@@ -1,10 +1,10 @@
-require_relative '../music_album'
-require_relative '../author'
-require_relative '../label'
-require_relative '../genre'
+require_relative '../../src/book'
+require_relative '../../src/author'
+require_relative '../../src/label'
+require_relative '../../src/genre'
 
-module AddMusicAlbum
-  def add_music_album
+module AddBook
+  def add_book
     puts 'Title: '
     title = gets.chomp
     puts 'Author first name: '
@@ -13,14 +13,16 @@ module AddMusicAlbum
     author_last = gets.chomp
     puts 'Genre: '
     genre = gets.chomp
+    puts 'Publisher: '
+    publisher = gets.chomp
+    puts 'Cover state: '
+    cover_state = gets.chomp
     puts 'Publish date: '
     publish_date = gets.chomp
     puts 'Label: '
     label = gets.chomp
     puts 'Label color: '
     label_color = gets.chomp
-    puts 'is it on spotify? (y/n)'
-    spotify = gets.chomp
 
     new_label = @labels.find { |lab| lab.title == label }
     new_genre = @genres.find { |gen| gen.name == genre }
@@ -39,10 +41,10 @@ module AddMusicAlbum
       @labels << new_label
     end
 
-    album = MusicAlbum.new(title, publish_date, on_spotify: spotify)
-    album.author = new_author
-    album.label = new_label
-    album.genre = new_genre
-    @albums << album
+    book = Book.new(title, publisher, cover_state, publish_date)
+    book.author = new_author
+    book.label = new_label
+    book.genre = new_genre
+    @books << book
   end
 end

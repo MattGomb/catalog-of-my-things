@@ -1,11 +1,11 @@
-require_relative '../book'
-require_relative '../author'
-require_relative '../label'
-require_relative '../genre'
+require_relative '../../src/game'
+require_relative '../../src/author'
+require_relative '../../src/label'
+require_relative '../../src/genre'
 
-module AddBook
-  def add_book
-    puts 'Title: '
+module AddGame
+  def add_game
+    puts 'Title'
     title = gets.chomp
     puts 'Author first name: '
     author_first = gets.chomp
@@ -13,12 +13,10 @@ module AddBook
     author_last = gets.chomp
     puts 'Genre: '
     genre = gets.chomp
-    puts 'Publisher: '
-    publisher = gets.chomp
-    puts 'Cover state: '
-    cover_state = gets.chomp
     puts 'Publish date: '
     publish_date = gets.chomp
+    puts 'Last Played: '
+    last_played_at = gets.chomp
     puts 'Label: '
     label = gets.chomp
     puts 'Label color: '
@@ -41,10 +39,10 @@ module AddBook
       @labels << new_label
     end
 
-    book = Book.new(title, publisher, cover_state, publish_date)
-    book.author = new_author
-    book.label = new_label
-    book.genre = new_genre
-    @books << book
+    game = Game.new(title, publish_date, last_played_at)
+    game.author = new_author
+    game.label = new_label
+    game.genre = new_genre
+    @games << game
   end
 end
