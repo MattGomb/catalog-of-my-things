@@ -18,7 +18,7 @@ module AddBook
     puts 'Cover state: '
     cover_state = gets.chomp
     puts 'Publish date: '
-    publish_date = gets.chomp
+    publish_date = correct_format
     puts 'Label: '
     label = gets.chomp
     puts 'Label color: '
@@ -46,5 +46,19 @@ module AddBook
     book.label = new_label
     book.genre = new_genre
     @books << book
+  end
+
+  def correct_format
+    option = nil
+    loop do
+      option = gets.chomp
+      case option
+      when %r/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
+        break
+      else
+        puts 'Please enter the valid format: dd/mm/yyyy'
+      end
+    end
+    option
   end
 end
