@@ -40,3 +40,11 @@ CREATE TABLE labels (
     title VARCHAR(255),
     color VARCHAR(255)
 );
+
+CREATE TABLE genres (
+    id CHAR(36) PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+ALTER TABLE items
+ADD FOREIGN KEY (genre_id) REFERENCES genres (id);
