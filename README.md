@@ -122,6 +122,8 @@ You can deploy this project using:
 
 👤 **Davian Beroni**
 - GitHub: [@Dadadon](https://github.com/Dadadon)
+- Twitter: [Davian Beroni](https://twitter.com/davianberoni)
+- LinkedIn: [Davian Beroni](https://www.linkedin.com/in/davian-beroni/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
