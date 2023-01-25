@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Genre do
-  before (:each) do
+  before(:each) do
     @genre = Genre.new('Test genre')
   end
 
@@ -17,9 +17,9 @@ describe Genre do
     end
   end
 
-  describe "#adding an item" do
-    it "adds correctly to the items instance variable" do
-      item = instance_double("MusicAlbum")
+  describe '#adding an item' do
+    it 'adds correctly to the items instance variable' do
+      item = instance_double('MusicAlbum')
       allow(item).to receive(:genre=)
       @genre.add_item(item)
       expect(@genre.items).to include(item)

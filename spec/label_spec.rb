@@ -1,9 +1,7 @@
 require 'spec_helper'
 
-require 'spec_helper'
-
 describe Label do
-  before (:each) do
+  before(:each) do
     @label = Label.new('Test label', 'green')
   end
 
@@ -25,9 +23,9 @@ describe Label do
     end
   end
 
-  describe "#adding an item" do
-    it "adds correctly to the items instance variable" do
-      item = instance_double("MusicAlbum")
+  describe '#adding an item' do
+    it 'adds correctly to the items instance variable' do
+      item = instance_double('MusicAlbum')
       allow(item).to receive(:label=)
       @label.add_item(item)
       expect(@label.items).to include(item)

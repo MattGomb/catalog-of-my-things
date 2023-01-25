@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe Book do
-  before (:each) do
+  before(:each) do
     @book = Book.new('Test title', 'Test publisher', 'Good cover state', '2022/12/12', archived: true)
   end
-  
+
   describe 'Book is a child of Item' do
     it 'returns true' do
       expect(@book).to be_a_kind_of(Item)

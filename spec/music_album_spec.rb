@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe MusicAlbum do
-  before (:each) do
+  before(:each) do
     @album = MusicAlbum.new('The Sound of Silence', '19/10/1964')
   end
 
