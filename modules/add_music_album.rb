@@ -36,7 +36,7 @@ module AddMusicAlbum
     end
     unless new_label
       new_label = Label.new(label, label_color)
-      @genres << new_genre
+      @labels << new_label
     end
 
     album = MusicAlbum.new(title, publish_date, on_spotify: spotify)
