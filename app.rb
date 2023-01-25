@@ -2,6 +2,9 @@ require_relative './modules/add_book'
 require_relative './modules/list_books'
 require_relative './modules/add_music_album'
 require_relative './modules/list_music_album'
+require_relative './modules/list_authors'
+require_relative './data/write_authors'
+require_relative './data/read_authors'
 require_relative './data/write_book'
 require_relative './data/read_book'
 require_relative './data/write_music_album'
@@ -16,12 +19,15 @@ class App
   include ListMusicAlbums
   include WriteMusicAlbum
   include ReadMusicAlbum
+  include ListAuthors
+  include WriteAuthors
+  include ReadAuthors
 
   def initialize
     @books = read_book
     @albums = read_music_album
     @games = []
-    @authors = []
+    @authors = read_authors
     @labels = []
     @genres = []
   end
@@ -40,7 +46,7 @@ class App
     when '5'
       puts 'This will list the labels'
     when '6'
-      puts 'This will list the authors'
+      list_authors
     when '7'
       add_book
     when '8'
@@ -50,6 +56,7 @@ class App
     else
       write_book
       write_music_album
+      write_authors
       puts 'Thanks for using the app'
       exit
     end

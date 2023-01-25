@@ -1,11 +1,11 @@
 [
   {
-    "title": "a",
-    "author": "a, a",
-    "genre": "a",
-    "publish_date": "a",
-    "label": "a",
-    "label_color": "a",
+    "title": "album1",
+    "author": "authLast2, authFirst2",
+    "genre": "genre2",
+    "publish_date": "2023",
+    "label": "good",
+    "label_color": "green",
     "on_spotify": "y"
   }
 ]
