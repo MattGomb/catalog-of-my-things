@@ -38,7 +38,7 @@ module AddBook
     end
     unless new_label
       new_label = Label.new(label, label_color)
-      @genres << new_genre
+      @labels << new_label
     end
 
     book = Book.new(title, publisher, cover_state, publish_date)
