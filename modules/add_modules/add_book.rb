@@ -53,7 +53,7 @@ module AddBook
     loop do
       option = gets.chomp
       case option
-      when /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
+      when %r/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
         break
       else
         puts 'Please enter the valid format: dd/mm/yyyy'

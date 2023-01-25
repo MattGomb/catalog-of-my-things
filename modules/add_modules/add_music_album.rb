@@ -14,13 +14,13 @@ module AddMusicAlbum
     puts 'Genre: '
     genre = gets.chomp
     puts 'Publish date: '
-    publish_date =correct_format
+    publish_date = correct_format
     puts 'Label: '
     label = gets.chomp
     puts 'Label color: '
     label_color = gets.chomp
     puts 'is it on spotify? (y/n)'
-    spotify = is_on_spotify?
+    spotify = spoti_has_it?
 
     new_label = @labels.find { |lab| lab.title == label }
     new_genre = @genres.find { |gen| gen.name == genre }
@@ -46,7 +46,7 @@ module AddMusicAlbum
     @albums << album
   end
 
-  def is_on_spotify?
+  def spoti_has_it?
     on_spotify = false
     loop do
       option = gets.chomp.upcase!
@@ -68,7 +68,7 @@ module AddMusicAlbum
     loop do
       option = gets.chomp
       case option
-      when /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
+      when %r/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/
         break
       else
         puts 'Please enter the valid format: dd/mm/yyyy'
