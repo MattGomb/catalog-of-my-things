@@ -93,7 +93,7 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-`rspec src/spec`
+`rspec spec`
 
 
 ### Deployment
